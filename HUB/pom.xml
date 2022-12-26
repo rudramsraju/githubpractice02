@@ -7,7 +7,7 @@
   <groupId>GIT</groupId>
   <artifactId>HUB</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-
+	
   <name>HUB</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
@@ -41,14 +41,26 @@
 		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
-			<version>3.0.0</version>
+			<version>5.0.8</version>
 		</dependency>
 
        </dependencies>
 
   <build>
+  
+   
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M7</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>testng.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>

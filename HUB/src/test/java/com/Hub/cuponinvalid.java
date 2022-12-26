@@ -1,4 +1,4 @@
-package GIT.HUB;
+package com.Hub;
 
 import java.time.Duration;
 
@@ -15,7 +15,7 @@ import com.runner.TestBase1;
 
 public class cuponinvalid extends TestBase1 {
    
-
+     
 	 @Test
 	 public void invalidcoupons() throws InterruptedException {
 		
@@ -93,7 +93,8 @@ public class cuponinvalid extends TestBase1 {
 			 	driver.findElement(By.xpath("/html/body/div[5]/div/div/div/div/div[2]/p")).click();
 			 	Thread.sleep(2000);
 			 	
-               // popup
+                // popup
+			 	
 			 	String pop= driver.findElement(By.xpath("//*[@class='Toastify']")).getText();
 			 	Thread.sleep(2000);
 			 	System.out.println(pop);
