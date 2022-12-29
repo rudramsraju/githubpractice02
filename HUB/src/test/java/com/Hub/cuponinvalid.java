@@ -30,7 +30,7 @@ public class cuponinvalid extends TestBase1 {
 				Thread.sleep(2000);
 	         
 				cupon.log(Status.PASS, "Website launched succefully");
-			 
+			 try {
 	           // All products view all
 		       wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"product_group__view_all__IwjUVbW4\"]"))).click();
 		
@@ -100,8 +100,19 @@ public class cuponinvalid extends TestBase1 {
 			 	System.out.println(pop);
       
 			 	cupon.log(Status.PASS,pop);
+			 }
+			 catch (Exception e) {
+				 
+				 System.out.println(e);
+			 
+			 }
 	
-	
+			finally {
+				System.out.println("block of code for testing");
+				
+							}
+			 
+			 
 	}
 	
 	
